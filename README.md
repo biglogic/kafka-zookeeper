@@ -1,5 +1,5 @@
 # kafka-zookeeper
-a kafka-zookeeper docker compose for quik setup with kafka ui
+a kafka-zookeeper docker compose for quick setup with kafka ui
 
 
 ## Kafka and Zookeeper Cluster with Docker Compose
