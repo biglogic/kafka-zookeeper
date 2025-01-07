@@ -25,7 +25,8 @@ services:
       ZOOKEEPER_SERVER_ID: 1
       ZOOKEEPER_SERVERS: zoo1:2888:3888;zoo2:2888:3888
     volumes:
-      - ./zookeeper_data:/var/lib/zookeeper
+      - ./zookeeper_data:/var/lib/zookeeper/data
+      - ./zookeeper_log:/var/lib/zookeeper/log
     
   zoo2:
     image: confluentinc/cp-zookeeper:7.3.2
@@ -38,7 +39,8 @@ services:
       ZOOKEEPER_SERVER_ID: 2
       ZOOKEEPER_SERVERS: zoo1:2888:3888;zoo2:2888:3888
     volumes:
-      - ./zookeeper_data_2:/var/lib/zookeeper
+      - ./zookeeper_data_2:/var/lib/zookeeper/data
+      - ./zookeeper_log_2:/var/lib/zookeeper/log
 
   kafka1:
     image: confluentinc/cp-kafka:7.3.2
